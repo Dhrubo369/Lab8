@@ -59,6 +59,10 @@ public class CustomList extends ArrayAdapter<City> {
         cities.remove(city);
     }
 
+    public int countCity(String cityName) {
+
+    }
+
 
     private CustomList list;
     /**
