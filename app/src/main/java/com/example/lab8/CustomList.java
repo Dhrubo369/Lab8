@@ -60,7 +60,13 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public int countCity(String cityName) {
-
+        int count = 0;
+        for (City city : cities) {
+            if (city.getCityName().equals(cityName)) {
+                count++;
+            }
+        }
+        return count;
     }
 
 
