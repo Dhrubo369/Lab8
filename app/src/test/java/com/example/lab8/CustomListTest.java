@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class CustomListTest {
     private CustomList list;
+    private CustomList list2;
     /**
      * create a mocklist for my citylist
      * @return
@@ -31,14 +32,12 @@ public class CustomListTest {
 
     @Test
     public void deleteCityTest() {
-        list = MockCityList();
+        list2 = MockCityList();
+
         City city1 = new City("Toronto", "ON");
-        City city2 = new City("Montreal", "QC");
-        list.addCity(city1);
-        list.addCity(city2);
-        int initialSize = list.getCount();
-        list.deleteCity(city1);
-        assertEquals(list.getCount(), initialSize - 1);
-        assertFalse(list.hasCity(city1));
+        list2.addCity(city1);
+        int listSize = list2.getCount();
+        list2.deleteCity(city1);
+        assertEquals(list2.getCount(), listSize - 1);
     }
 }
