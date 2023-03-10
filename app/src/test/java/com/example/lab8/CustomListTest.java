@@ -28,4 +28,19 @@ public class CustomListTest {
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
     }
+
+    @Test
+    public void hasCityTest() {
+        list = MockCityList();
+        City city1 = new City("Toronto", "ON");
+        City city2 = new City("Montreal", "QC");
+        City city3 = new City("Vancouver", "BC");
+        list.addCity(city1);
+        list.addCity(city2);
+        list.addCity(city3);
+        assertTrue(list.hasCity(city1));
+        assertTrue(list.hasCity(city2));
+        assertTrue(list.hasCity(city3));
+        assertFalse(list.hasCity(new City("Calgary", "AB")));
+    }
 }

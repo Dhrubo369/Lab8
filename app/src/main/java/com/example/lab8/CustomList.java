@@ -53,6 +53,10 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
 
     }
+
+    public boolean hasCity(City city) {
+        //return cities.contains(city);
+    }
     private CustomList list;
     /**
     * create a mocklist for my citylist
